@@ -1,9 +1,16 @@
-import example.pepita
-
-describe "group of tests for pepita" {
-
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+import tito.*
+import bebidas.* 
+describe "test de tito"{
+  test "tito consume 10 de whisky y su sustancia actual es whisky"{
+    tito.consumir(10,whisky)
+    assert.equals (whisky, tito.sustanciaAcutal())
+    // asser.equals(objeto1,objeto2) -- devuelve True
+    // asser.equals(1,2) -- devuelve False
   }
 
+  test " tito consum 10 de Whisky y su dossi consumida es 10"{
+    tito.consumir(10,whisky)
+    assert.equals(11, tito.dosisConsumida())
+    
+  }
 }
